@@ -38,9 +38,9 @@ Output for both Summary and Detailed starts with a timestamp, the device hostnam
 
 The Summary is intended to provide a quick overview of the F5 device status so that an Ops engineer can quickly review it in seconds and then use the detailed output to get further information on any issues highlighted in the summary.
 
-![summary](/images/f5ohs_summary.png)
+![summary](/images/f5ohs_summary.png "Summary Output")
 
-**Summary** Output presents a concise summarisation of the **Detailed** output data for each metric (F5 configuration object/appliance parameter.) 
+**Summary** Output (see above) presents a concise summarisation of the **Detailed** output data for each metric (F5 configuration object/appliance parameter.) 
 Numerical values are added, indicating percentage UP/DOWN, temperature, milliseconds etc, or an OK or DOWN, eg for Fans and PSUs, to each line (metric) in the **Summary**.
 Furthermore, the F5 objects listed here show the number of objects UP/Available as a proportion of the total, where *total **=** objects Available **+** objects Offline*:
 * NET Trunks, 
@@ -69,7 +69,8 @@ The below thresholds are configurable:
 * ssl cert expiry threshold (days)
 
 
-Detailed output provides more details for each metric, listing each configured object and status for the revlevant metric.
+**Detailed** output provides more details for each metric, listing each configured object and status for the revlevant metric.
+[detailed](/images/f5ohs_detailed.png "Detailed Output")
 
 ### How easy is F5OHS to use?
 F5OHS is extremely simple to use, requiring only device IP, username and password, to pull the data from almost any current F5 device (appliance/VE) running versions 12.1.5+. Optional parameters allow you to tailor the output to your requirements. 
