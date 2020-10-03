@@ -75,8 +75,6 @@ The below thresholds are configurable:
 
 [Detailed example](/images/f5ohs_detailed.png "Detailed Output")
 
-### How easy is F5OHS to use?
-
  
 
 ### What is F5OHS not?
