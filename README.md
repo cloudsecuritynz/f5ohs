@@ -1,7 +1,7 @@
 
 ### What is F5OHS?
 F5 Operation Health Sanpshot is a (PIP installable) python package which uses the 
-F5 REST API to gather point-in-time F5 device (appliance or VE) operational status for 20+ configuration objects and key device metrics (full list below.) The output is a formatted text string, either written to a file or returning formatted strings for the calling python script to use, for example to be sent in the body of an email.
+F5 iControl REST API to gather point-in-time F5 device (appliance or VE) operational status for 20+ configuration objects and key device metrics (full list below.) The output is a formatted text string, either written to a file or returning formatted strings for the calling python script to use, for example to be sent in the body of an email.
 As a python script, it can be set to run on a schedule using cron/task scheduler. 
 
 ### What checks are performed?
@@ -34,9 +34,11 @@ F5OHS offers Ops teams and other IT teams the ability get a quick grasp of the o
 Output is usually two (python strings) - Summary and Detailed. Is it possible to output only one of those, as required.
 
 The content of each output string is detailed here, but intended to be intuitive. Please see the attched examples.
-Output for both Summary and Detailed starts with a timestamp, the device hostname, platform (appliance/VE,) BIGIP version and, optionally, the serial number. 
+Output for both Summary and Detailed starts with a timestamp, the device hostname, platform (appliance/VE,) BIGIP version and, optionally, the serial number. All automatically pulled using the API. 
 
 The Summary is intended to provide a quick overview of the F5 device status so that an Ops engineer can quickly review it in seconds and then use the detailed output to get further information on any issues highlighted in the summary.
+
+![summary](/images/f5ohs_summary.png)
 
 **Summary** Output presents a concise summarisation of the **Detailed** output data for each metric (F5 configuration object/appliance parameter.) 
 Numerical values are added, indicating percentage UP/DOWN, temperature, milliseconds etc, or an OK or DOWN, eg for Fans and PSUs, to each line (metric) in the **Summary**.
