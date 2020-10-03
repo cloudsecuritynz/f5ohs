@@ -75,10 +75,6 @@ The below thresholds are configurable:
 
 [Detailed example](/images/f5ohs_detailed.png "Detailed Output")
 
- 
-
-### What is F5OHS not?
-F5OHS is not a replacement for any real-time operational monitoring tools. Organisations should, ideally, be monitoring the device with SNMP (and augmenting with sflow) and sending all logs to a SIEM. 
 
 
 ### What F5 models/BIGIP software versions does F5OHS work on?
@@ -89,6 +85,8 @@ F5OHS should work on any version 12.1.5 or higher. It has been tested on LTS ver
 * 14.1.2
 * 15.1.0
 
+### What is F5OHS not?
+F5OHS is not a replacement for any real-time operational monitoring tools. Organisations should, ideally, be monitoring the device with SNMP (and augmenting with sflow) and sending all logs to a SIEM. 
 
 ### Does it work with partitions?
 In general, APM and GTM dont play nice with partitions, so partitions shouldnt be a big part of the checking.
@@ -96,7 +94,7 @@ Its been tested to work with partitions for LTM VIPs and GTM wideIPs.
  
 
 ### How to use F5OHS
-#### authentication options
+#### Authentication options:
 * Basic and Token authentication can be used. If using basic, access to bash via API will require an admin account be used. [An overview of iControl permissions is here.] (https://support.f5.com/csp/article/K84925527)
 
 * More fine grained API Token control is detailed [here by Satoshi Toyosawa on DevCentral] (https://devcentral.f5.com/s/articles/icontrol-rest-fine-grained-role-based-access-control-30773)
