@@ -45,13 +45,13 @@ The **Summary** provides a quick overview of the F5 device status that can revie
 **Summary** output (see above) presents a concise summarisation of the **Detailed** output data for each metric (F5 configuration object/appliance parameter.) 
 Numerical values are added, indicating percentage UP/DOWN, temperature, milliseconds etc, or an OK or DOWN, eg for Fans and PSUs, to each line (metric) in the **Summary**.
 Furthermore, the F5 objects listed here show the number of objects UP/Available as a proportion of the total, where *total **=** objects Available **+** objects Offline*:
-* NET Trunks, 
-* LTM VIPs, 
-* GTM wideIP, 
-* GTM Data Centers, 
-* GTM Servers, 
-* GTM Links all, 
-* GTM BIND, 
+* NET Trunks 
+* LTM VIPs 
+* GTM wideIP 
+* GTM Data Centers 
+* GTM Servers 
+* GTM Links all 
+* GTM BIND 
 * GTM External DNS servers
 
 These above listed objects are only counted in the relevant **Summary** line if they are enabled and have monitoring configured. Objects with Disabled and Unknown status' are not counted.    
