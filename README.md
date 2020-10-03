@@ -86,7 +86,7 @@ F5OHS should work on any version 12.1.5 or higher. It has been tested on LTS ver
 * 15.1.0
 
 ### What is F5OHS not?
-F5OHS is not a replacement for any real-time operational monitoring tools. Organisations should, ideally, be monitoring the device with SNMP (and augmenting with sflow) and sending all logs to a SIEM. 
+F5OHS is not a replacement for any real-time operational monitoring tools. Organisations should, ideally, be monitoring the device with SNMP (and augmenting with sflow) and sending all logs to a SIEM. F5OHS was designed to augment those tools.
 
 ### Does it work with partitions?
 In general, APM and GTM dont play nice with partitions, so partitions shouldnt be a big part of the checking.
