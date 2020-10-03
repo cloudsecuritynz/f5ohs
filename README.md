@@ -35,7 +35,7 @@ Output is usually two (python strings) - **Summary** and **Detailed**. Is it pos
 
 Output for both Summary and Detailed is intuitive and starts with a timestamp, the device hostname, platform (appliance/VE,) BIGIP version and, optionally, the serial number. All automatically pulled using the API. 
 
-The **Summary** provides a quick overview of the F5 device status that can reviewed in seconds. Ops engineers can then use the detailed output to get further information on any issues highlighted in the summary.
+The **Summary** provides a quick overview of the F5 device status that can reviewed in seconds. Please see the example here:
 
 ![summary](/images/f5ohs_summary.png "Summary Output")
 
@@ -68,7 +68,7 @@ The below thresholds are configurable:
 * ssl cert expiry threshold (days)
 
 
-**Detailed** output provides more details for each metric, listing each configured object and status for the revlevant metric.
+**Detailed** output provides more details for each metric, listing each configured object and status for the revlevant metric. Ops engineers can use the **Detailed** output to get further information on any issues highlighted in the **Summary**.
 
 [Detailed example](/images/f5ohs_detailed.png "Detailed Output")
 
@@ -96,10 +96,12 @@ Its been tested to work with partitions for LTM VIPs and GTM wideIPs.
  
 
 ### How to run F5OHS
--authentication options
-https://devcentral.f5.com/s/articles/icontrol-rest-fine-grained-role-based-access-control-30773
+#### authentication options
+* Basic and Token authentication can be used. If using basic, access to bash via API will require an admin account be used. [An overview of iControl permissions is here.] (https://support.f5.com/csp/article/K84925527)
+
+* More fine grained API Token control is detailed [here by Satoshi Toyosawa on DevCentral] (https://devcentral.f5.com/s/articles/icontrol-rest-fine-grained-role-based-access-control-30773)
 
 
 ### Future updates
--run from cli
--function to get API Token (run from from cli) and automatically run f5snapshot() 
+* run from cli
+* function to get API Token (run from from cli) and automatically run f5snapshot() 
