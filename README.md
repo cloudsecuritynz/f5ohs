@@ -50,9 +50,9 @@ Furthermore, the F5 objects listed here show the number of objects UP/Available 
 * GTM wideIP 
 * GTM Data Centers 
 * GTM Servers 
-* GTM Links all 
-* GTM BIND 
-* GTM External DNS servers
+* GTM Links 
+* GTM BIND DNS responses
+* GTM External DNS server availability and DNS responses
 
 These above listed objects are only counted in the relevant **Summary** line if they are enabled and have monitoring configured. Objects with Disabled and Unknown status' are not counted.    
 
