@@ -1,7 +1,7 @@
 
 ### What is F5OHS?
 F5 Operation Health Snapshot is a (PIP installable) python package which uses the 
-F5 iControl REST API to gather point-in-time F5 device (appliance or VE) operational status for 20+ configuration objects and key device metrics (full list below.) The output is two formatted text strings, either written to a file or returning the formatted strings for the calling python script to use,e.g. to be sent in the body of an email set to run daily with cron/task scheduler.
+F5 iControl REST API to gather point-in-time F5 device (appliance or VE) operational status for 20+ configuration objects and key device metrics (full list below.) The output is two formatted text strings, either written to a file or returning the formatted strings for the calling python script to use, e.g. to be sent in the body of an email set to run daily with cron/task scheduler.
  
 
 F5OHS is extremely simple to use, requiring only device IP, username and password, to pull the data from almost any current F5 device (appliance/VE) running versions 12.1.5 *onwards*. Optional parameters allow you to tailor the output to your requirements. 
