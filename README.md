@@ -1,8 +1,11 @@
 
 ### What is F5OHS?
-F5 Operation Health Sanpshot is a (PIP installable) python package which uses the 
-F5 iControl REST API to gather point-in-time F5 device (appliance or VE) operational status for 20+ configuration objects and key device metrics (full list below.) The output is a formatted text string, either written to a file or returning formatted strings for the calling python script to use, for example to be sent in the body of an email.
+F5 Operation Health Snapshot is a (PIP installable) python package which uses the 
+F5 iControl REST API to gather point-in-time F5 device (appliance or VE) operational status for 20+ configuration objects and key device metrics (full list below.) The output is two formatted text strings, either written to a file or returning the formatted strings for the calling python script to use,e.g. to be sent in the body of an email.
 As a python script, it can be set to run on a schedule using cron/task scheduler. 
+
+F5OHS is extremely simple to use, requiring only device IP, username and password, to pull the data from almost any current F5 device (appliance/VE) running versions 12.1.5 *onwards*. Optional parameters allow you to tailor the output to your requirements. 
+F5OHS will use the API to automatically verify what F5 modules are enabled and test only configured and enabled objects from those modules. Disabled objects are ignored. You dont need to provide any other details, if a module/object is not provisioned and enabled then the script will ignore it. 
 
 ### What checks are performed?
 1. Device Uptime in days, hours and minutes
@@ -68,13 +71,12 @@ The below thresholds are configurable:
 * ssl cert expiry threshold (days)
 
 
-**Detailed** output provides more details for each metric, listing each configured object and status for the revlevant metric. Ops engineers can use the **Detailed** output to get further information on any issues highlighted in the **Summary**.
+**Detailed** output provides more details for each metric, listing each configured object/metric and its status. Ops engineers can use the **Detailed** output to get further information on any issues highlighted in the **Summary**.
 
 [Detailed example](/images/f5ohs_detailed.png "Detailed Output")
 
 ### How easy is F5OHS to use?
-F5OHS is extremely simple to use, requiring only device IP, username and password, to pull the data from almost any current F5 device (appliance/VE) running versions 12.1.5+. Optional parameters allow you to tailor the output to your requirements. 
-F5OHS will use the API to automatically verify what F5 modules are enabled and test only configured and enabled objects from those modules. Disabled objects are ignored. You dont need to provide any other details, if module/object is not provisioned and enabled then the script will ignore it. 
+
  
 
 ### What is F5OHS not?
@@ -95,7 +97,7 @@ In general, APM and GTM dont play nice with partitions, so partitions shouldnt b
 Its been tested to work with partitions for LTM VIPs and GTM wideIPs. 
  
 
-### How to run F5OHS
+### How to use F5OHS
 #### authentication options
 * Basic and Token authentication can be used. If using basic, access to bash via API will require an admin account be used. [An overview of iControl permissions is here.] (https://support.f5.com/csp/article/K84925527)
 
