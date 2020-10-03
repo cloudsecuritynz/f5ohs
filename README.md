@@ -30,17 +30,16 @@ As a python script, it can be set to run on a schedule using cron/task scheduler
 ### What can F5OHS be used for?
 F5OHS offers Ops teams and other IT teams the ability get a quick grasp of the operational health of their F5 devices. The metrics provided give a quick point-in-time overview of device health and allow support teams to quickly identify and correct smaller issues before they become larger issues and impact the working of the device. F5OHS was born out of the need for the authors' customers to perform manual daily operational checks as part of the requirements for external auditors. F5OHS drastically reduces the time needed to perform these checks by providing a text snapshot which takes seconds to review, rather than many minutes to login to F5 devices manually and perform the checks. 
 
-### What does the F5OHS output look like?
-Output is usually two (python strings) - Summary and Detailed. Is it possible to output only one of those, as required.
+###F5OHS text output example and explanation
+Output is usually two (python strings) - **Summary** and **Detailed**. Is it possible to output only one of those, as required.
 
-The content of each output string is detailed here, but intended to be intuitive. Please see the attched examples.
-Output for both Summary and Detailed starts with a timestamp, the device hostname, platform (appliance/VE,) BIGIP version and, optionally, the serial number. All automatically pulled using the API. 
+Output for both Summary and Detailed is intuitive and starts with a timestamp, the device hostname, platform (appliance/VE,) BIGIP version and, optionally, the serial number. All automatically pulled using the API. 
 
-The Summary is intended to provide a quick overview of the F5 device status so that an Ops engineer can quickly review it in seconds and then use the detailed output to get further information on any issues highlighted in the summary.
+The **Summary** provides a quick overview of the F5 device status that can reviewed in seconds. Ops engineers can then use the detailed output to get further information on any issues highlighted in the summary.
 
 ![summary](/images/f5ohs_summary.png "Summary Output")
 
-**Summary** Output (see above) presents a concise summarisation of the **Detailed** output data for each metric (F5 configuration object/appliance parameter.) 
+**Summary** output (see above) presents a concise summarisation of the **Detailed** output data for each metric (F5 configuration object/appliance parameter.) 
 Numerical values are added, indicating percentage UP/DOWN, temperature, milliseconds etc, or an OK or DOWN, eg for Fans and PSUs, to each line (metric) in the **Summary**.
 Furthermore, the F5 objects listed here show the number of objects UP/Available as a proportion of the total, where *total **=** objects Available **+** objects Offline*:
 * NET Trunks, 
@@ -70,7 +69,8 @@ The below thresholds are configurable:
 
 
 **Detailed** output provides more details for each metric, listing each configured object and status for the revlevant metric.
-[detailed](/images/f5ohs_detailed.png "Detailed Output")
+
+[Detailed example](/images/f5ohs_detailed.png "Detailed Output")
 
 ### How easy is F5OHS to use?
 F5OHS is extremely simple to use, requiring only device IP, username and password, to pull the data from almost any current F5 device (appliance/VE) running versions 12.1.5+. Optional parameters allow you to tailor the output to your requirements. 
