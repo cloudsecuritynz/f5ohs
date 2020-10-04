@@ -78,7 +78,7 @@ The below thresholds are configurable:
 
 
 ### What F5 platforms/BIGIP software versions has F5OHS been tested on?
-F5OHS has been tested on i4000,i5000 and i10000 appliances and various VE editions.
+F5OHS has been tested on i4000, i5000 and i10000 appliances and various VE editions.
 F5OHS should work on any version 12.1.5 or higher. It has been tested on LTS versions:
 * 12.1.X
 * 13.1.X
@@ -95,7 +95,8 @@ Basic and Token authentication can be used. If using basic, access to bash via A
 * [How to obtain an API Token](https://devcentral.f5.com/s/articles/iControl-REST-Authentication-Token-Management)
 * More fine grained API Token control is detailed [here by Satoshi Toyosawa on DevCentral](https://devcentral.f5.com/s/articles/icontrol-rest-fine-grained-role-based-access-control-30773)
 
-#### Common usage examples:
+#### Python usage examples:
+Below are come common usage examples. Click here for a more complete list.
 * Return summary and detailed output strings using admin username and password:
 > import f5osh   
 >      
