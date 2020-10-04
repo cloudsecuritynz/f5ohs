@@ -8,27 +8,27 @@ F5OHS is very [simple to use](https://github.com/cloudsecuritynz/f5ohs/blob/main
 F5OHS will use the API to automatically verify what F5 modules are enabled and test only configured and enabled objects from those modules. Disabled objects are ignored. You dont need to provide any other details, if a module/object is not provisioned and enabled then the script will ignore it. 
 
 ## What checks are performed?
-1. Device Uptime in days, hours and minutes
-1. Device Status,i.e. is the device online/offline and active/standby
-1. Device NTP synchronisation: in ms
-1. Device Memory usage %
-1. Device CPU usage % (average across all CPUs)
-1. Device Disk Mount usage %
-1. Device Disk Inode usage %
-1. Appliance Fans, up or down
-1. Appliance PSUs, up or down
-1. Appliance Chassis temerature in degrees C
-1. Network Trunks, up or down 
-1. Network Interfaces, up or down
-1. SSL/TLS Certificates due to expire with X (default 31) days (F5 default and bundle certs igrored)
-1. LTM Virtual Servers status/availability
-1. APM Connectivity: total number of current user connections (not including duplicates caused by using DTLS)
-1. GTM/DNS number of Data Centre objects and their current status/availability
-1. GTM/DNS number of Server objects and their current status/availability
-1. GTM/DNS number of DC Links and their current status/availability
-1. GTM/DNS number of WideIPs and their current status/availability
-1. GTM/DNS BIND availability, whether BIND responds to DNS requests for wideIP A records (other types of wideIP signored)
-1. GTM/DNS External DNS Servers (in Listener LB pools) availability and response to DNS requests
+- [ ]  Device Uptime in days, hours and minutes
+- [ ]  Device Status,i.e. is the device online/offline and active/standby
+- [ ]  Device NTP synchronisation: in ms
+- [ ]  Device Memory usage %
+- [ ]  Device CPU usage % (average across all CPUs)
+- [ ]  Device Disk Mount usage %
+- [ ]  Device Disk Inode usage %
+- [ ]  Appliance Fans, up or down
+- [ ]  Appliance PSUs, up or down
+- [ ]  Appliance Chassis temerature in degrees C
+- [ ]  Network Trunks, up or down 
+- [ ]  Network Interfaces, up or down
+- [ ]  SSL/TLS Certificates due to expire with X (default 31) days (F5 default and bundle certs igrored)
+- [ ]  LTM Virtual Servers status/availability
+- [ ]  APM Connectivity: total number of current user connections (not including duplicates caused by using DTLS)
+- [ ]  GTM/DNS number of Data Centre objects and their current status/availability
+- [ ]  GTM/DNS number of Server objects and their current status/availability
+- [ ]  GTM/DNS number of DC Links and their current status/availability
+- [ ]  GTM/DNS number of WideIPs and their current status/availability
+- [ ]  GTM/DNS BIND availability, whether BIND responds to DNS requests for wideIP A records (other types of wideIP signored)
+- [ ]  GTM/DNS External DNS Servers (in Listener LB pools) availability and response to DNS requests
 
 ## What can F5OHS be used for?
 F5OHS offers Ops teams and other IT teams the ability get a quick grasp of the operational health of their F5 devices. The metrics provided give a quick point-in-time overview of device health and allow support teams to quickly identify and correct smaller issues before they become larger issues and impact the working of the device. F5OHS was born out of the need for the authors' customers to perform manual daily operational checks as part of the requirements for external auditors. F5OHS drastically reduces the time needed to perform these checks by providing a text snapshot which takes seconds to review, rather than many minutes to login to F5 devices manually and perform the checks. 
