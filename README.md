@@ -95,7 +95,38 @@ Basic and Token authentication can be used. If using basic, access to bash via A
 * [How to obtain an API Token](https://devcentral.f5.com/s/articles/iControl-REST-Authentication-Token-Management)
 * More fine grained API Token control is detailed [here by Satoshi Toyosawa on DevCentral](https://devcentral.f5.com/s/articles/icontrol-rest-fine-grained-role-based-access-control-30773)
 
-#### Python usage examples:
+#### F5OHS Python options:
+- username (str, optional): the account name used to acces the F5 API. 
+ - Defaults to empty string.
+- password (str, optional): the account password used to acces the F5 API.
+ -     Defaults to empty string.
+- token (str, optional): the auth token used to acces the F5 API. 
+ - Defaults to empty string.
+- summary_only (bool, optional): return only the summary status string.
+    Defaults False.
+- detailed_only (bool, optional): return only the detailed status string.
+    Defaults False.
+- serial (bool, optional): include F5 device serial number in return string.
+    Defaults True.
+- filePath (str, optional): drive path location to write to text file the
+    summary and/or detailed strings. If filePath is empty string, return
+    summary/detailed Strings to calling python script - ie no file
+    written. Defaults to empty string.
+- alert_message (str, optional): substring used in return string to highlight
+    where config object status response not expected or where config object
+    status response above threshold. Default is "\t!!!!".
+- memory_alert (int, optional): percentage memory usage threshold, above which
+    alert raised in return string. Default is 90.
+- cpu_alert (int, optional): percentage cpu usage threshold, above which
+    alert raised in return string. Default is 80.
+- disk_usage (int, optional): percentage disk usage (disk and inode)
+    threshold, above which alert raised in return string. Default is 95.
+- ssl_expire_days (int, optional): number of days until SSL/TLS cert expiry
+    threshold, below which alert raised in return string. Default is 31.
+- fqdns (list, optional): list of fqdns used to test BIND and/or external
+    DNS server responses. Default is ['google.com', 'cnn.com', 'f5.com'].
+
+#### F5OHS Python usage examples:
 Below are come common usage examples. [Click here for a more complete list.](/usage_examples.md)
 * Return summary and detailed output strings using admin username and password:
 > import f5osh   
