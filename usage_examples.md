@@ -1,9 +1,10 @@
-#### Python usage examples:
+
 
 #### NOTE - if writing to a file on a Windows system, either use double backslash or prefix the quoted filename with r to denote a raw string in python:
 * filePath="C:\\f5snapshot\\F5devicename_date.txt" 
 * filePath=**r**"C:\f5snapshot\F5devicename_date.txt"
 
+#### Python usage examples:
 
 * Return summary and detailed output strings using admin username and password:
 > import f5osh   
