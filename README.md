@@ -122,5 +122,6 @@ In general, APM and GTM dont play nice with partitions, so partitions shouldnt b
 Its been tested to work with partitions for LTM VIPs and GTM wideIPs. 
 
 ### Future updates
-- [ ]  adjust f5snapshot() to run from cli
+- [ ]  enhance f5snapshot() to run from cli
 - [ ]  new function to get API Token (run from from cli) and then automatically call f5snapshot() 
+- [ ]  adjust f5snapshot() to use %-formatting instead of f-strings so that it can be used with all python 3.x
