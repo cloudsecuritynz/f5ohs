@@ -116,7 +116,7 @@ Basic and Token authentication can be used. If using basic, access to bash via A
 - alert_message (str, optional): substring used in return string to highlight
     where config object status response not expected or where config object
     status response above threshold. 
-    - Default is "\t!!!!".
+    - Default is "  !!!!". (*Note*: there is a tabbed space leading)
 - memory_alert (int, optional): percentage memory usage threshold, above which
     alert raised in return string. 
     - Default is 90.
