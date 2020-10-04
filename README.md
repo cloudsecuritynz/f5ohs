@@ -133,10 +133,10 @@ Basic and Token authentication can be used. If using basic, access to bash via A
     DNS server responses. 
     - Default is ['google.com', 'cnn.com', 'f5.com'].
 
-#### F5OHS usage examples:
-
-##### Prerequisite: Install the f5ohs module from PIP
+#### Install the f5ohs module from PIP
 > python -m pip install f5ohs
+
+#### F5OHS usage examples:
 
 Below are come common usage examples. [Click here for a more complete list.](/usage_examples.md)
 * Return summary and detailed output strings using admin username and password:
@@ -151,7 +151,7 @@ Below are come common usage examples. [Click here for a more complete list.](/us
 > summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", token="alphanumericAPITokengoeshere")    
 > print(summaryString, detailedString)
 
-* Output both summary and detailed strings to a text file with admin username and password:
+* Output both summary and detailed strings to a (single) text file with admin username and password:
 > import f5osh   
 >  
 > f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd", filePath=r"C:\f5snapshot\F5devicename_date.txt")
