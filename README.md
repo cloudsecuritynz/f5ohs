@@ -77,7 +77,7 @@ The below thresholds are configurable:
 
 
 
-### What F5 platforms/BIGIP software versions does F5OHS work on?
+### What F5 platforms/BIGIP software versions has F5OHS been tested on?
 F5OHS has been tested on i4000,i5000 and i10000 appliances and various VE editions.
 F5OHS should work on any version 12.1.5 or higher. It has been tested on LTS versions:
 * 12.1.X
@@ -98,7 +98,15 @@ Its been tested to work with partitions for LTM VIPs and GTM wideIPs.
 * Basic and Token authentication can be used. If using basic, access to bash via API (used for *uptime, NTP status, disk usage* and *DNS requests [with dig]*) will require an admin account be used. [An overview of iControl authentication is here.](https://clouddocs.f5.com/api/icontrol-soap/Authentication_with_the_F5_REST_API.html)
 * [How to obtain an API Token](https://devcentral.f5.com/s/articles/iControl-REST-Authentication-Token-Management)
 * More fine grained API Token control is detailed [here by Satoshi Toyosawa on DevCentral](https://devcentral.f5.com/s/articles/icontrol-rest-fine-grained-role-based-access-control-30773)
+#### Common usage examples:
+* Return summary and detailed output strings using admin username and password:
+> summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd")
 
+* Return summary and detailed strings using API token:
+> summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", token="alphanumericAPITokengoeshere")
+
+* Output both summary and detailed strings to a text file with admin username and password:
+> f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd", filePath=r"C:\f5snapshot\F5devicename_date.txt")
 
 ### Future updates
 - [ ]  adjust f5snapshot() to run from cli
