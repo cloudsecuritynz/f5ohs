@@ -84,7 +84,9 @@ F5OHS should work on any version 12.1.5 or higher. It has been tested on LTS ver
 * 13.1.X
 * 14.1.X
 * 15.1.X
- 
+
+### What Python versions will this work on?
+The F5OHS package or script should work in any Python environment running 3.6+ as it relies heavily on *f strings*.
 
 ### How to use F5OHS
 #### Authentication options:
