@@ -99,7 +99,7 @@ Basic and Token authentication can be used. If using basic, access to bash via A
 - username (str, optional): the account name used to acces the F5 API. 
     - Defaults to empty string.
 - password (str, optional): the account password used to acces the F5 API.
-    -     Defaults to empty string.
+    - Defaults to empty string.
 - token (str, optional): the auth token used to acces the F5 API. 
     - Defaults to empty string.
 - summary_only (bool, optional): return only the summary status string.
