@@ -42,6 +42,8 @@ The **Summary** provides a quick overview of the F5 device status that can revie
 
 ![summary](/images/f5ohs_summary.png "Summary Output")
 
+[**Detailed** output can be quite verbose, please view here](/images/f5ohs_detailed.png "Detailed Output")
+
 **Summary** output (see above) presents a concise summarisation of the **Detailed** output data for each metric (F5 configuration object/appliance parameter.) 
 Numerical values are added, indicating percentage UP/DOWN, temperature, milliseconds etc, or an OK or DOWN, eg for Fans and PSUs, to each line (metric) in the **Summary**.
 Furthermore, the F5 objects listed here show the number of objects UP/Available as a proportion of the total, where *total **=** objects Available **+** objects Offline*:
@@ -72,9 +74,6 @@ The below thresholds are configurable:
 
 
 **Detailed** output provides more details for each metric, listing each configured object/metric and its status. Ops engineers can use the **Detailed** output to get further information on any issues highlighted in the **Summary**.
-
-[Detailed example](/images/f5ohs_detailed.png "Detailed Output")
-
 
 
 ## What F5 platforms/BIGIP software versions has F5OHS been tested on?
