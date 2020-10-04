@@ -1,6 +1,6 @@
 
 ## What is F5OHS?
-F5 Operational Health Snapshot is a (PIP installable) python package, __*requiring only the python standard library*__, which uses the 
+F5 Operational Health Snapshot is a lightweight python script, __*requiring only the python standard library*__, which uses the 
 F5 iControl REST API to gather point-in-time F5 device operational status for 20+ configuration objects and key device metrics (full list below.) The output is two formatted text strings, either written to a file or returning the formatted strings for the calling python script to use, e.g. to be sent in the body of an email set to run daily with cron/task scheduler.
  
 
@@ -90,8 +90,8 @@ The F5OHS package or script should work in any Python environment running 3.6+ a
 
 ## How to use F5OHS
 
-#### First Install the f5ohs module from PIP
-> python -m pip install f5ohs
+#### First import the f5ohs.py script to the directory you will run it from. 
+
 
 #### Then refer to one of the more common usage examples below or [Click here for a more complete list.](/usage_examples.md)
 
@@ -165,7 +165,8 @@ F5OHS is not a replacement for any real-time operational monitoring tools. Organ
 In general, APM and GTM dont play nice with partitions, so partitions shouldnt be a big part of the checking.
 Its been tested to work with partitions for LTM VIPs and GTM wideIPs. 
 
-## Future updates
+## Future possible updates
 - [ ]  enhance f5snapshot() to run from cli
 - [ ]  new function to get API Token (run from from cli) and then automatically call f5snapshot() 
 - [ ]  adjust f5snapshot() to use %-formatting instead of f-strings so that it can be used with all python 3.x
+- [ ]  make PIP installable
