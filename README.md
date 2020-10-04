@@ -171,6 +171,7 @@ Its been tested to work with partitions for LTM VIPs and GTM wideIPs.
 - [ ]  new function to get API Token (run from from cli) and then automatically call f5snapshot() 
 - [ ]  adjust f5snapshot() to use %-formatting instead of f-strings so that it can be used with all python 3.x
 - [ ]  make PIP installable
+- [ ]  test on v16.x
 
 ## Questions/Comments/Feedback?
 Im not a Software Engineer. Im a Network Security Engineer who has been interested in what development/automation can offer his trade for a while. Please dont hesitate to leave a comment here or email me: git@cloudsecurity.nz
