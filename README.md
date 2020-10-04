@@ -96,40 +96,40 @@ Basic and Token authentication can be used. If using basic, access to bash via A
 * More fine grained API Token control is detailed [here by Satoshi Toyosawa on DevCentral](https://devcentral.f5.com/s/articles/icontrol-rest-fine-grained-role-based-access-control-30773)
 
 #### F5OHS Python options:
-- *username* (str, optional): the account name used to acces the F5 API. 
+- __*username*__ (str, optional): the account name used to acces the F5 API. 
     - Defaults to empty string.
-- password (str, optional): the account password used to acces the F5 API.
+- __*password*__ (str, optional): the account password used to acces the F5 API.
     - Defaults to empty string.
-- token (str, optional): the auth token used to acces the F5 API. 
+- __*token*__ (str, optional): the auth token used to acces the F5 API. 
     - Defaults to empty string.
-- summary_only (bool, optional): return only the summary status string.
+- __*summary_only*__ (bool, optional): return only the summary status string.
     - Defaults False.
-- detailed_only (bool, optional): return only the detailed status string.
+- __*detailed_only*__ (bool, optional): return only the detailed status string.
     - Defaults False.
-- serial (bool, optional): include F5 device serial number in return string.
+- __*serial*__ (bool, optional): include F5 device serial number in return string.
     - Defaults True.
-- filePath (str, optional): drive path location to write to text file the
+- __*filePath*__ (str, optional): drive path location to write to text file the
     summary and/or detailed strings. If filePath is empty string, return
     summary/detailed Strings to calling python script - ie no file
     written. 
     - Defaults to empty string.
-- alert_message (str, optional): substring used in return string to highlight
+- __*alert_message*__ (str, optional): substring used in return string to highlight
     where config object status response not expected or where config object
     status response above threshold. 
     - Default is "  !!!!". (*Note*: there is a tabbed space leading)
-- memory_alert (int, optional): percentage memory usage threshold, above which
+- __*memory_alert*__ (int, optional): percentage memory usage threshold, above which
     alert raised in return string. 
     - Default is 90.
-- cpu_alert (int, optional): percentage cpu usage threshold, above which
+- __*cpu_alert*__ (int, optional): percentage cpu usage threshold, above which
     alert raised in return string. 
     - Default is 80.
-- disk_usage (int, optional): percentage disk usage (disk and inode)
+- __*disk_usage*__ (int, optional): percentage disk usage (disk and inode)
     threshold, above which alert raised in return string. 
     - Default is 95.
-- ssl_expire_days (int, optional): number of days until SSL/TLS cert expiry
+- __*ssl_expire_days*__ (int, optional): number of days until SSL/TLS cert expiry
     threshold, below which alert raised in return string. 
     - Default is 31.
-- fqdns (list, optional): list of fqdns used to test BIND and/or external
+- __*fqdns*__ (list, optional): list of fqdns used to test BIND and/or external
     DNS server responses. 
     - Default is ['google.com', 'cnn.com', 'f5.com'].
 
