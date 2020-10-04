@@ -89,6 +89,29 @@ F5OHS should work on any version 12.1.5 or higher. It has been tested on LTS ver
 The F5OHS package or script should work in any Python environment running 3.6+ as it relies heavily on *f strings*.
 
 ## How to use F5OHS
+
+#### First Install the f5ohs module from PIP
+> python -m pip install f5ohs
+
+#### Then refer to one of the more common usage scenarios below or [Click here for a more complete list.](/usage_examples.md)
+
+* Return summary and detailed output strings using admin username and password:
+> import f5osh   
+>      
+> summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd")    
+> print(summaryString, detailedString)
+
+* Return summary and detailed strings using API token:
+> import f5osh    
+>   
+> summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", token="alphanumericAPITokengoeshere")    
+> print(summaryString, detailedString)
+
+* Output both summary and detailed strings to a (single) text file with admin username and password:
+> import f5osh   
+>  
+> f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd", filePath=r"C:\f5snapshot\F5devicename_date.txt")
+
 #### Authentication options:
 Basic and Token authentication can be used. If using basic, access to bash via API (used for *uptime, NTP status, disk usage* and *DNS requests [with dig]*) will require an admin account be used. 
 * [An overview of iControl authentication is here.](https://clouddocs.f5.com/api/icontrol-soap/Authentication_with_the_F5_REST_API.html)
@@ -133,28 +156,7 @@ Basic and Token authentication can be used. If using basic, access to bash via A
     DNS server responses. 
     - Default is ['google.com', 'cnn.com', 'f5.com'].
 
-#### Install the f5ohs module from PIP
-> python -m pip install f5ohs
 
-#### F5OHS usage examples:
-
-Below are come common usage examples. [Click here for a more complete list.](/usage_examples.md)
-* Return summary and detailed output strings using admin username and password:
-> import f5osh   
->      
-> summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd")    
-> print(summaryString, detailedString)
-
-* Return summary and detailed strings using API token:
-> import f5osh    
->   
-> summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", token="alphanumericAPITokengoeshere")    
-> print(summaryString, detailedString)
-
-* Output both summary and detailed strings to a (single) text file with admin username and password:
-> import f5osh   
->  
-> f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd", filePath=r"C:\f5snapshot\F5devicename_date.txt")
 
 ## What is F5OHS not?
 F5OHS is not a replacement for any real-time operational monitoring tools. Organisations should, ideally, be monitoring the device with SNMP (and augmenting with sflow) and sending all logs to a SIEM. F5OHS was designed to augment those tools.
