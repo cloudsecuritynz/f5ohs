@@ -30,10 +30,10 @@ F5OHS will use the API to automatically verify what F5 modules are enabled and t
 1. GTM/DNS BIND availability, whether BIND responds to DNS requests for wideIP A records (other types of wideIP signored)
 1. GTM/DNS External DNS Servers (in Listener LB pools) availability and response to DNS requests
 
-### What can F5OHS be used for?
+## What can F5OHS be used for?
 F5OHS offers Ops teams and other IT teams the ability get a quick grasp of the operational health of their F5 devices. The metrics provided give a quick point-in-time overview of device health and allow support teams to quickly identify and correct smaller issues before they become larger issues and impact the working of the device. F5OHS was born out of the need for the authors' customers to perform manual daily operational checks as part of the requirements for external auditors. F5OHS drastically reduces the time needed to perform these checks by providing a text snapshot which takes seconds to review, rather than many minutes to login to F5 devices manually and perform the checks. 
 
-### F5OHS example and explanation
+## F5OHS example and explanation
 Output is usually two (python strings) - **Summary** and **Detailed**. Is it possible to output only one of those, as required.
 
 Output for both Summary and Detailed is intuitive and starts with a timestamp, the device hostname, platform (appliance/VE,) BIGIP version and, optionally, the serial number. All automatically pulled using the API. 
@@ -77,7 +77,7 @@ The below thresholds are configurable:
 
 
 
-### What F5 platforms/BIGIP software versions has F5OHS been tested on?
+## What F5 platforms/BIGIP software versions has F5OHS been tested on?
 F5OHS has been tested on i4000, i5000 and i10000 appliances and various VE editions.
 F5OHS should work on any version 12.1.5 or higher. It has been tested on LTS versions:
 * 12.1.X
@@ -85,10 +85,10 @@ F5OHS should work on any version 12.1.5 or higher. It has been tested on LTS ver
 * 14.1.X
 * 15.1.X
 
-### What Python versions will this work on?
+## What Python versions will this work on?
 The F5OHS package or script should work in any Python environment running 3.6+ as it relies heavily on *f strings*.
 
-### How to use F5OHS
+## How to use F5OHS
 #### Authentication options:
 Basic and Token authentication can be used. If using basic, access to bash via API (used for *uptime, NTP status, disk usage* and *DNS requests [with dig]*) will require an admin account be used. 
 * [An overview of iControl authentication is here.](https://clouddocs.f5.com/api/icontrol-soap/Authentication_with_the_F5_REST_API.html)
@@ -152,14 +152,14 @@ Below are come common usage examples. [Click here for a more complete list.](/us
 >  
 > f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd", filePath=r"C:\f5snapshot\F5devicename_date.txt")
 
-### What is F5OHS not?
+## What is F5OHS not?
 F5OHS is not a replacement for any real-time operational monitoring tools. Organisations should, ideally, be monitoring the device with SNMP (and augmenting with sflow) and sending all logs to a SIEM. F5OHS was designed to augment those tools.
 
-### Does it work with partitions?
+## Does it work with partitions?
 In general, APM and GTM dont play nice with partitions, so partitions shouldnt be a big part of the checking.
 Its been tested to work with partitions for LTM VIPs and GTM wideIPs. 
 
-### Future updates
+## Future updates
 - [ ]  enhance f5snapshot() to run from cli
 - [ ]  new function to get API Token (run from from cli) and then automatically call f5snapshot() 
 - [ ]  adjust f5snapshot() to use %-formatting instead of f-strings so that it can be used with all python 3.x
