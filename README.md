@@ -4,7 +4,7 @@ F5 Operational Health Snapshot is a (PIP installable) python package which uses 
 F5 iControl REST API to gather point-in-time F5 device (appliance or VE) operational status for 20+ configuration objects and key device metrics (full list below.) The output is two formatted text strings, either written to a file or returning the formatted strings for the calling python script to use, e.g. to be sent in the body of an email set to run daily with cron/task scheduler.
  
 
-F5OHS is very simple to use, requiring only device IP, username and password (or API token,) to pull the data from almost any current F5 device (appliance/VE) running __*versions 12.1.5 and up*__. Optional parameters allow you to tailor the output to your requirements. 
+F5OHS is very simple to use, requiring only device IP, username and password (or API token,) to pull the data from almost any current F5 device (appliance/VE) running __*versions 12.1.X and up*__. Optional parameters allow you to tailor the output to your requirements. 
 F5OHS will use the API to automatically verify what F5 modules are enabled and test only configured and enabled objects from those modules. Disabled objects are ignored. You dont need to provide any other details, if a module/object is not provisioned and enabled then the script will ignore it. 
 
 ### What checks are performed?
@@ -80,10 +80,10 @@ The below thresholds are configurable:
 ### What F5 models/BIGIP software versions does F5OHS work on?
 F5OHS has been tested on i4000,i5000 and i10000 appliances and various VE editions.
 F5OHS should work on any version 12.1.5 or higher. It has been tested on LTS versions:
-* 12.1.5
-* 13.1.3
-* 14.1.2
-* 15.1.0
+* 12.1.X
+* 13.1.X
+* 14.1.X
+* 15.1.X
 
 ### What is F5OHS not?
 F5OHS is not a replacement for any real-time operational monitoring tools. Organisations should, ideally, be monitoring the device with SNMP (and augmenting with sflow) and sending all logs to a SIEM. F5OHS was designed to augment those tools.
@@ -101,5 +101,5 @@ Its been tested to work with partitions for LTM VIPs and GTM wideIPs.
 
 
 ### Future updates
-- [ ]  run from cli
-- [ ]  function to get API Token (run from from cli) and automatically run f5snapshot() 
+- [ ]  adjust f5snapshot() to run from cli
+- [ ]  new function to get API Token (run from from cli) and then automatically call f5snapshot() 
