@@ -90,7 +90,7 @@ The F5OHS package or script should work in any Python environment running 3.6+ a
 
 ## How to use F5OHS
 
-#### First import the f5ohs.py script to the directory you will run it from. 
+#### First import the [f5ohs.py](/f5ohs.py) script to your Python environment. 
 
 
 #### Then refer to one of the more common usage examples below or [Click here for a more complete list.](/usage_examples.md)
@@ -111,6 +111,7 @@ The F5OHS package or script should work in any Python environment running 3.6+ a
 > import f5osh   
 >  
 > f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd", filePath=r"C:\f5snapshot\F5devicename_date.txt")
+
 
 #### Authentication options:
 Basic and Token authentication can be used. If using basic, access to bash via API (used for *uptime, NTP status, disk usage* and *DNS requests [with dig]*) will require an admin account be used. 
