@@ -100,9 +100,9 @@ summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", username="admin"
 print(summaryString, detailedString)
 
 * Return summary and detailed strings using API token:
-> import f5osh
-> summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", token="alphanumericAPITokengoeshere")
-> print(summaryString, detailedString)
+>> import f5osh
+>> summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", token="alphanumericAPITokengoeshere")
+>> print(summaryString, detailedString)
 
 * Output both summary and detailed strings to a text file with admin username and password:
 > import f5osh
