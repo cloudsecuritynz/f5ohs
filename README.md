@@ -97,17 +97,20 @@ Basic and Token authentication can be used. If using basic, access to bash via A
 
 #### Common usage examples:
 * Return summary and detailed output strings using admin username and password:
-> import f5osh  
+> import f5osh 
+  
 summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd")  
 print(summaryString, detailedString)
 
 * Return summary and detailed strings using API token:
->> import f5osh  
->> summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", token="alphanumericAPITokengoeshere")  
->> print(summaryString, detailedString)
+> import f5osh  
+  
+> summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", token="alphanumericAPITokengoeshere")  
+> print(summaryString, detailedString)
 
 * Output both summary and detailed strings to a text file with admin username and password:
-> import f5osh  
+> import f5osh 
+  
 > f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd", filePath=r"C:\f5snapshot\F5devicename_date.txt")
 
 ### What is F5OHS not?
