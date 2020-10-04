@@ -84,13 +84,6 @@ F5OHS should work on any version 12.1.5 or higher. It has been tested on LTS ver
 * 13.1.X
 * 14.1.X
 * 15.1.X
-
-### What is F5OHS not?
-F5OHS is not a replacement for any real-time operational monitoring tools. Organisations should, ideally, be monitoring the device with SNMP (and augmenting with sflow) and sending all logs to a SIEM. F5OHS was designed to augment those tools.
-
-### Does it work with partitions?
-In general, APM and GTM dont play nice with partitions, so partitions shouldnt be a big part of the checking.
-Its been tested to work with partitions for LTM VIPs and GTM wideIPs. 
  
 
 ### How to use F5OHS
@@ -109,6 +102,13 @@ Basic and Token authentication can be used. If using basic, access to bash via A
 
 * Output both summary and detailed strings to a text file with admin username and password:
 > f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd", filePath=r"C:\f5snapshot\F5devicename_date.txt")
+
+### What is F5OHS not?
+F5OHS is not a replacement for any real-time operational monitoring tools. Organisations should, ideally, be monitoring the device with SNMP (and augmenting with sflow) and sending all logs to a SIEM. F5OHS was designed to augment those tools.
+
+### Does it work with partitions?
+In general, APM and GTM dont play nice with partitions, so partitions shouldnt be a big part of the checking.
+Its been tested to work with partitions for LTM VIPs and GTM wideIPs. 
 
 ### Future updates
 - [ ]  adjust f5snapshot() to run from cli
