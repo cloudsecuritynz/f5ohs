@@ -1,10 +1,10 @@
 
 ### What is F5OHS?
-F5 Operational Health Snapshot is a (PIP installable) python package **requiring only the python standard library** which uses the 
+F5 Operational Health Snapshot is a (PIP installable) python package __*requiring only the python standard library*__ which uses the 
 F5 iControl REST API to gather point-in-time F5 device operational status for 20+ configuration objects and key device metrics (full list below.) The output is two formatted text strings, either written to a file or returning the formatted strings for the calling python script to use, e.g. to be sent in the body of an email set to run daily with cron/task scheduler.
  
 
-F5OHS is very [simple to use](https://github.com/cloudsecuritynz/f5ohs/blob/main/README.md#how-to-use-f5ohs), requiring only device IP, username and password (or API token,) to pull the data from almost any current F5 device, **Appliance or VE**, running __*versions 12.1.X and up*__. Optional parameters allow you to tailor the output to your requirements. 
+F5OHS is very [simple to use](https://github.com/cloudsecuritynz/f5ohs/blob/main/README.md#how-to-use-f5ohs), requiring only device IP, username and password (or API token,) to pull the data from almost any current F5 device, __*Appliance or VE*__, running __*versions 12.1.X and up*__. Optional parameters allow you to tailor the output to your requirements. 
 F5OHS will use the API to automatically verify what F5 modules are enabled and test only configured and enabled objects from those modules. Disabled objects are ignored. You dont need to provide any other details, if a module/object is not provisioned and enabled then the script will ignore it. 
 
 ### What checks are performed?
