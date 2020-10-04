@@ -93,21 +93,21 @@ The F5OHS package or script should work in any Python environment running 3.6+ a
 #### First Install the f5ohs module from PIP
 > python -m pip install f5ohs
 
-#### Then refer to one of the more common usage scenarios below or [Click here for a more complete list.](/usage_examples.md)
+#### Then refer to one of the more common usage examples below or [Click here for a more complete list.](/usage_examples.md)
 
-* Return summary and detailed output strings using admin username and password:
+* Example: Return summary and detailed output strings using admin username and password
 > import f5osh   
 >      
 > summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd")    
 > print(summaryString, detailedString)
 
-* Return summary and detailed strings using API token:
+* Example: Return summary and detailed strings using API token
 > import f5osh    
 >   
 > summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", token="alphanumericAPITokengoeshere")    
 > print(summaryString, detailedString)
 
-* Output both summary and detailed strings to a (single) text file with admin username and password:
+* Example: Output both summary and detailed strings to a (single) text file with admin username and password
 > import f5osh   
 >  
 > f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd", filePath=r"C:\f5snapshot\F5devicename_date.txt")
