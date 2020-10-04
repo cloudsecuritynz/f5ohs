@@ -96,8 +96,8 @@ Basic and Token authentication can be used. If using basic, access to bash via A
 #### Common usage examples:
 * Return summary and detailed output strings using admin username and password:
 > import f5osh
-> summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd")
-> print(summaryString, detailedString)
+summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd")
+print(summaryString, detailedString)
 
 * Return summary and detailed strings using API token:
 > import f5osh
