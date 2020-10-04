@@ -96,7 +96,7 @@ Basic and Token authentication can be used. If using basic, access to bash via A
 * More fine grained API Token control is detailed [here by Satoshi Toyosawa on DevCentral](https://devcentral.f5.com/s/articles/icontrol-rest-fine-grained-role-based-access-control-30773)
 
 #### F5OHS Python options:
-- username (str, optional): the account name used to acces the F5 API. 
+- *username* (str, optional): the account name used to acces the F5 API. 
     - Defaults to empty string.
 - password (str, optional): the account password used to acces the F5 API.
     - Defaults to empty string.
