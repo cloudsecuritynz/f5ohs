@@ -95,11 +95,11 @@ Its been tested to work with partitions for LTM VIPs and GTM wideIPs.
 
 ### How to use F5OHS
 #### Authentication options:
-* Basic and Token authentication can be used. If using basic, access to bash via API (used for *uptime, NTP status, disk usage* and *DNS requests with dig*) will require an admin account be used. [An overview of iControl permissions is here.](https://support.f5.com/csp/article/K84925527)
+* Basic and Token authentication can be used. If using basic, access to bash via API (used for *uptime, NTP status, disk usage* and *DNS requests (with dig)*) will require an admin account be used. [An overview of iControl permissions is here.](https://support.f5.com/csp/article/K84925527)
 
 * More fine grained API Token control is detailed [here by Satoshi Toyosawa on DevCentral](https://devcentral.f5.com/s/articles/icontrol-rest-fine-grained-role-based-access-control-30773)
 
 
 ### Future updates
-* run from cli
-* function to get API Token (run from from cli) and automatically run f5snapshot() 
+- [ ]  run from cli
+- [ ]  function to get API Token (run from from cli) and automatically run f5snapshot() 
