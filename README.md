@@ -7,6 +7,13 @@ F5 iControl REST API to gather point-in-time F5 device operational status for 20
 F5OHS is very [simple to use](https://github.com/cloudsecuritynz/f5ohs/blob/main/README.md#how-to-use-f5ohs), requiring only device IP, username and password (or API token,) to pull the data from almost any current F5 device, __*Appliance or VE*__, running __*versions 12.1.X and up*__. Optional parameters allow you to tailor the output to your requirements. 
 F5OHS will use the API to automatically verify what F5 modules are enabled and test only configured and enabled objects from those modules. Disabled objects are ignored. You dont need to provide any other details, if a module/object is not provisioned and enabled then the script will ignore it. 
 
+## F5OHS use cases
+
+* a quick point-in-time overview of device health allowing support teams to quickly identify and correct smaller issues before they become larger issues.
+* manual daily operational checks as part of the requirements for external auditors. Seconds to read the output instead of many minutes by manually logging on 
+* pre and post upgrade verification - is everything that was working/up prior to upgrade still working post upgrade? 
+
+
 ## What checks are performed?
 - [ ]  Device Uptime in days, hours and minutes
 - [ ]  Device Status,i.e. is the device online/offline and active/standby
@@ -28,10 +35,7 @@ F5OHS will use the API to automatically verify what F5 modules are enabled and t
 - [ ]  GTM/DNS number of DC Links and their current status/availability
 - [ ]  GTM/DNS number of WideIPs and their current status/availability
 - [ ]  GTM/DNS BIND availability, whether BIND responds to DNS requests for wideIP A records (other types of wideIP signored)
-- [ ]  GTM/DNS External DNS Servers (in Listener LB pools) availability and response to DNS requests
-
-## What can F5OHS be used for?
-F5OHS offers Ops teams and other IT teams the ability get a quick grasp of the operational health of their F5 devices. The metrics provided give a quick point-in-time overview of device health and allow support teams to quickly identify and correct smaller issues before they become larger issues and impact the working of the device. F5OHS was born out of the need for the authors' customers to perform manual daily operational checks as part of the requirements for external auditors. F5OHS drastically reduces the time needed to perform these checks by providing a text snapshot which takes seconds to review, rather than many minutes to login to F5 devices manually and perform the checks. 
+- [ ]  GTM/DNS External DNS Servers (in Listener LB pools) availability and response to DNS requests 
 
 ## F5OHS example and explanation
 Output is usually two (python strings) - **Summary** and **Detailed**. It is possible to output only one of those, as required.
