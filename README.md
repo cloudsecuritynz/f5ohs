@@ -173,4 +173,4 @@ Its been tested to work with partitions for LTM VIPs and GTM wideIPs.
 - [ ]  test on v16.x
 
 ## Questions/Comments/Feedback?
-Im not a Software Engineer. Im a Network Security Engineer who has been interested in what development/automation can offer his trade for a while. Please dont hesitate to leave a comment here or email me: git@cloudsecurity.nz
+Im not a Software Engineer. Im a Network Security Engineer who, for a while, has been interested in what development/automation can offer his trade. Please dont hesitate to leave a comment here or email me: git@cloudsecurity.nz
