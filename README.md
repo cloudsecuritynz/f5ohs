@@ -1,6 +1,6 @@
 
 ## What is F5OHS?
-F5 Operational Health Snapshot is a lightweight [python script](/f5ohs.py), __*requiring only the python standard library*__, which uses the 
+F5 Operational Health Snapshot is a lightweight [Python script](/f5ohs.py), __*requiring only the Python standard library*__, which uses the 
 F5 iControl REST API to gather point-in-time F5 device operational status for 20+ configuration objects and key device metrics (full list below.) The output is two formatted text strings, either written to a file or returning the formatted strings for the calling python script to use, e.g. to be sent in the body of an email set to run daily with cron/task scheduler.
  
 
