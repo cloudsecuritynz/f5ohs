@@ -60,19 +60,19 @@ def f5snapshot(host, username="", password="", token="", summary_only=False,
 
     Examples:
         Return summary and detailed output strings using admin username and password:
-            >>>summaryString, detailedString = f5ohs.f5snapshot("10.10.10.10",
+            >>>summaryString, detailedString = f5snapshot("10.10.10.10",
                                             username="admin", password="aP@ssw0rd")
 
         Return summary and detailed strings using API token:
-            >>>summaryString, detailedString = f5ohs.f5snapshot("10.10.10.10",
+            >>>summaryString, detailedString = f5snapshot("10.10.10.10",
                                             token="alphanumericAPITokengoeshere")
 
         Return only summary string using admin username and password:
-            >>>summaryString = f5ohs.f5snapshot("10.10.10.10", username="admin",
+            >>>summaryString = f5snapshot("10.10.10.10", username="admin",
                             password="aP@ssw0rd", summary_only=True)
 
         Return only detailed string using API token:
-            >>>detailedString = f5ohs.f5snapshot("10.10.10.10",
+            >>>detailedString = f5snapshot("10.10.10.10",
                              token="alphanumericAPITokengoeshere", detailed_only=True)
 
         Return only detailed string using admin username and password and output to
@@ -80,34 +80,34 @@ def f5snapshot(host, username="", password="", token="", summary_only=False,
         backslash (e.g. "C:\\f5snapshot\\F5devicename_date.txt") or prefix the quoted
         filename with r to denote a raw string in python
         (e.g. filePath=r"C:\f5snapshot\F5devicename_date.txt"):
-            >>>f5ohs.f5snapshot("10.10.10.10", username="admin",
+            >>>f5snapshot("10.10.10.10", username="admin",
                              password="aP@ssw0rd", detailed_only=True,
                              filePath=r"C:\f5snapshot\F5devicename_date.txt")
 
         Return summary and detailed strings using API token and non-default alert message:
-            >>>summaryString, detailedString = f5ohs.f5snapshot("10.10.10.10",
+            >>>summaryString, detailedString = f5snapshot("10.10.10.10",
                                             token="alphanumericAPITokengoeshere",
                                             alert_message="*ALARM*")
 
         Return summary and detailed strings using API token WITHOUT including
         the F5 device serial number:
-            >>>summaryString, detailedString = f5ohs.f5snapshot("10.10.10.10",
+            >>>summaryString, detailedString = f5snapshot("10.10.10.10",
                                             token="alphanumericAPITokengoeshere",
                                             serial=False)
 
         Return only summary string using admin username and password and non-default
         memory and disk alert thresholds:
-            >>>summaryString = f5ohs.f5snapshot("10.10.10.10", username="admin",
+            >>>summaryString = f5snapshot("10.10.10.10", username="admin",
                             password="aP@ssw0rd", memory_alert=70, disk_usage=80)
 
         Return only detailed string using admin username and password and non-default
         SSL/TLS expiry thresholds:
-            >>>detailedString = f5ohs.f5snapshot("10.10.10.10", username="admin",
+            >>>detailedString = f5snapshot("10.10.10.10", username="admin",
                              password="aP@ssw0rd", ssl_expire_days=62)
 
         Return summary and detailed output strings using admin username and
         password and non-default fqdns:
-            >>>summaryString, detailedString = f5ohs.f5snapshot("10.10.10.10",
+            >>>summaryString, detailedString = f5snapshot("10.10.10.10",
                                             username="admin", password="aP@ssw0rd",
                                             fqdns=['example1.com','example2.com'])
 
