@@ -95,19 +95,19 @@ The F5OHS package or script should work in any Python environment running 3.6+ a
 #### Then refer to one of the more common usage examples below or [Click here for a more complete list.](/usage_examples.md)
 
 * Example: Return summary and detailed output strings using admin username and password
-> import f5osh   
+> from f5ohs import f5snapshot   
 >      
 > summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd")    
 > print(summaryString, detailedString)
 
 * Example: Return summary and detailed strings using API token
-> import f5osh    
+> from f5ohs import f5snapshot    
 >   
 > summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", token="alphanumericAPITokengoeshere")    
 > print(summaryString, detailedString)
 
 * Example: Output both summary and detailed strings to a (single) text file with admin username and password
-> import f5osh   
+> from f5ohs import f5snapshot   
 >  
 > f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd", filePath=r"C:\f5snapshot\F5devicename_date.txt")
 
