@@ -49,11 +49,11 @@ def f5snapshot(host, username="", password="", token="", summary_only=False,
         summary (string): only summary string output returned if ONLY summary_only=True
         detailed (string): only detailed string output returned if ONLY detailed_only=True
 
-        Otherwise, if both summary_only and detailed_only are equal to True/False, both summary
-        and detailed strings returned.
+        Otherwise, if both summary_only and detailed_only are equal to True or both False,
+        both summary and detailed strings returned.
 
-        If filePath contains a path, then the above outcome will also be saved to a txt file
-        at the specified (filePath) location
+        If filePath contains a path, then the above outcome will instead be saved to a txt file
+        at the specified (filePath) location 
 
     Raises:
         IOError: ERROR writing to file
