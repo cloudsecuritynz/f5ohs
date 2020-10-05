@@ -34,7 +34,7 @@ F5OHS will use the API to automatically verify what F5 modules are enabled and t
 F5OHS offers Ops teams and other IT teams the ability get a quick grasp of the operational health of their F5 devices. The metrics provided give a quick point-in-time overview of device health and allow support teams to quickly identify and correct smaller issues before they become larger issues and impact the working of the device. F5OHS was born out of the need for the authors' customers to perform manual daily operational checks as part of the requirements for external auditors. F5OHS drastically reduces the time needed to perform these checks by providing a text snapshot which takes seconds to review, rather than many minutes to login to F5 devices manually and perform the checks. 
 
 ## F5OHS example and explanation
-Output is usually two (python strings) - **Summary** and **Detailed**. Is it possible to output only one of those, as required.
+Output is usually two (python strings) - **Summary** and **Detailed**. It is possible to output only one of those, as required.
 
 Output for both Summary and Detailed is intuitive and starts with a timestamp, the device hostname, platform (appliance/VE,) BIGIP version and, optionally, the serial number. All automatically pulled using the API. 
 
