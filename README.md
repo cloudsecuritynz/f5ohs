@@ -10,7 +10,7 @@ F5OHS will use the API to automatically verify what F5 modules are enabled and t
 ## F5OHS use cases
 * a quick point-in-time overview of device health allowing support teams to quickly identify and correct smaller issues before they become larger issues.
 * manual daily operational checks as part of the requirements for external auditors. Seconds to read the output instead of many minutes by manually logging on 
-* pre and post upgrade verification - is everything that was working/up prior to upgrade still working post upgrade? 
+* pre and post upgrade verification - is everything that was up prior to upgrade still working post upgrade? 
 
 
 ## What checks are performed?
