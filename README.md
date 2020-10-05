@@ -89,7 +89,7 @@ The F5OHS package or script should work in any Python environment running 3.6+ a
 
 ## How to use F5OHS
 
-#### First import the [f5ohs.py](/f5ohs.py) script to your Python environment. 
+#### First import the [f5ohs.py](/f5ohs.py) script into your Python environment. 
 
 
 #### Then refer to one of the more common usage examples below or [Click here for a more complete list.](/usage_examples.md)
@@ -97,19 +97,19 @@ The F5OHS package or script should work in any Python environment running 3.6+ a
 * Example: Return summary and detailed output strings using admin username and password
 > from f5ohs import f5snapshot   
 >      
-> summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd")    
+> summaryString, detailedString = f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd")    
 > print(summaryString, detailedString)
 
 * Example: Return summary and detailed strings using API token
 > from f5ohs import f5snapshot    
 >   
-> summaryString, detailedString = f5osh.f5snapshot("10.10.10.10", token="alphanumericAPITokengoeshere")    
+> summaryString, detailedString = f5snapshot("10.10.10.10", token="alphanumericAPITokengoeshere")    
 > print(summaryString, detailedString)
 
 * Example: Output both summary and detailed strings to a (single) text file with admin username and password
 > from f5ohs import f5snapshot   
 >  
-> f5osh.f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd", filePath=r"C:\f5snapshot\F5devicename_date.txt")
+> f5snapshot("10.10.10.10", username="admin", password="aP@ssw0rd", filePath=r"C:\f5snapshot\F5devicename_date.txt")
 
 
 #### Authentication options:
