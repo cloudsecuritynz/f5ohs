@@ -8,7 +8,6 @@ F5OHS is very [simple to use](https://github.com/cloudsecuritynz/f5ohs/blob/main
 F5OHS will use the API to automatically verify what F5 modules are enabled and test only configured and enabled objects from those modules. Disabled objects are ignored. You dont need to provide any other details, if a module/object is not provisioned and enabled then the script will ignore it. 
 
 ## F5OHS use cases
-
 * a quick point-in-time overview of device health allowing support teams to quickly identify and correct smaller issues before they become larger issues.
 * manual daily operational checks as part of the requirements for external auditors. Seconds to read the output instead of many minutes by manually logging on 
 * pre and post upgrade verification - is everything that was working/up prior to upgrade still working post upgrade? 
